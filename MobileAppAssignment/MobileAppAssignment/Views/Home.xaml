@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            mc:Ignorable="d"
+             x:Class="MobileAppAssignment.Home"
+             Title="My Profile" NavigationPage.HasBackButton="False"
+              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+                android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.IsSwipePagingEnabled="False" NavigationPage.HasNavigationBar="True">
+    <ContentPage Title="Profile" IconImageSource="profile.png">
+        <ContentPage.ToolbarItems>
+            <ToolbarItem Text="Edit" Clicked="ToolbarItem_Clicked"/>
+        </ContentPage.ToolbarItems>
+        <ContentPage.Content>
+            <ScrollView>
+                <StackLayout Margin="30" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                        <ImageButton
+                         x:Name="image" Clicked="ImageButton_Clicked"/>
+                    </Grid>
+                       
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Name:" FontSize="15" TextColor="Red" Grid.Row="1" />
+                        <Label Text="{Binding studentName}" x:Name="name"  FontSize="15" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
+                        <Label Text="Email:" FontSize="15" TextColor="Red" Grid.Row="2"/>
+                        <Label Text="{Binding email}" x:Name="email"  FontSize="15" Grid.Column="1" Grid.Row="2"  Grid.ColumnSpan="2"/>
+                        <Label Text="Gender:" FontSize="15" TextColor="Red" Grid.Row="3"/>
+                        <Label Text="{Binding gender}" x:Name="gender"  FontSize="15" Grid.Column="1" Grid.Row="3"  Grid.ColumnSpan="2"/>
+                        <Label Text="Mobile.No:" FontSize="15" TextColor="Red" Grid.Row="4"/>
+                        <Label Text="{Binding phoneNo}" x:Name="phoneNo"  FontSize="15" Grid.Column="1" Grid.Row="4"  Grid.ColumnSpan="2"/>
+                        <Label Text="Programme:" FontSize="15" TextColor="Red" Grid.Row="5"/>
+                        <Label Text="{Binding Programme}" x:Name="programme"  FontSize="15" Grid.Column="1" Grid.Row="5"  Grid.ColumnSpan="2"/>
+                        <Label Text="Date Enrolled:" FontSize="15" TextColor="Red" Grid.Row="6"/>
+                        <Label  x:Name="dateEnrolled"  FontSize="15" Grid.Column="1" Grid.Row="6"  Grid.ColumnSpan="2"/>
+                        <Button Text="Change Password" Grid.Row="7" Grid.ColumnSpan="3" BackgroundColor="Red" TextColor="White" Clicked="changePassword"/>
+                        <Button Text="Logout" Grid.Row="8" Grid.ColumnSpan="3" BackgroundColor="Red" TextColor="White" Clicked="Logout"/>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </ContentPage.Content>
+    </ContentPage>
+</TabbedPage>
+    

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MobileAppAssignment.MainPage" BackgroundColor="White" NavigationPage.HasNavigationBar="False"
+            >
+    <ScrollView>
+        <AbsoluteLayout Padding="30">
+            <Image Source="EduvoLogo.jpg" 
+               AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" AbsoluteLayout.LayoutBounds="0,0,1,100"/>
+            <StackLayout AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" AbsoluteLayout.LayoutBounds="0.5,150,1,45">
+                <Entry Placeholder="Email" x:Name="email" BackgroundColor="Transparent" HorizontalTextAlignment="Center" />
+            </StackLayout>
+            <StackLayout AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" AbsoluteLayout.LayoutBounds="0.5,200,1,45">
+                <Entry Placeholder="Password" x:Name="password" IsPassword="True" BackgroundColor="Transparent" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <Button Text="Forgot password" Clicked="forgotPasswordBtn" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" AbsoluteLayout.LayoutBounds="0,260,1,45"/>
+            <StackLayout AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" AbsoluteLayout.LayoutBounds="0,480,1,45">
+                <Button Text="Login" BackgroundColor="Red" TextColor="White" Clicked="Loginbtn_Clicked"/>
+            </StackLayout>
+            <StackLayout AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" AbsoluteLayout.LayoutBounds="0,540,1,45">
+                <Button Text="Register" BackgroundColor="Red" TextColor="White" Clicked="Registerbtn"/>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ScrollView>
+    
+</ContentPage>

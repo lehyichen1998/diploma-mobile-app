@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MobileAppAssignment.Edit">
+    <ContentPage.Content>
+        <ScrollView>
+            <AbsoluteLayout >
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Update student Details" FontSize="20" Grid.ColumnSpan="2" TextColor="Red"/>
+                    <Label Text="Name:" FontSize="18" VerticalOptions="Center" Grid.Row="1"/>
+                    <Entry Text="{Binding studentName}" x:Name="name" Grid.Row="1" Grid.Column="1"/>
+                    <!--<Label Text="Gender:" Grid.Row="2" VerticalOptions="Center" FontSize="18"/>
+                    <Entry Text="{Binding gender}" x:Name="gender" Grid.Row="2" Grid.Column="1"/>-->
+                    <Grid Grid.Row="2" Grid.ColumnSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Gender :" FontSize="17" />
+                        <Picker Title="Gender" ItemsSource="{Binding gender}" ItemDisplayBinding="{Binding gender}"
+                            Grid.Column="1"  x:Name="gender" HorizontalOptions="FillAndExpand" SelectedItem="{Binding gender}">
+                            <Picker.Items>
+                                <x:String>Male</x:String>
+                                <x:String>Female</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Grid>
+                    <Label Text="Mobile No.:" FontSize="17" Grid.Row="3"/>
+                    <Entry Text="{Binding phoneNo}" x:Name="phone" Grid.Row="3" Grid.Column="1"/>
+                    <Grid Grid.Row="4" Grid.ColumnSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Programme :" FontSize="17" HorizontalOptions="Center"/>
+                        <Picker Title="Programme" ItemsSource="{Binding Programme}" SelectedItem="{Binding Programme}"
+                            Grid.Column="1"  x:Name="programme" HorizontalOptions="FillAndExpand" 
+                            ItemDisplayBinding="{Binding Programme}">
+                            <Picker.Items>
+                                <x:String>Diploma in Software Engineering</x:String>
+                                <x:String>Diploma in Information Technology</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Grid>
+                    <Button Text="Update" Grid.Row="5" Grid.ColumnSpan="2" BackgroundColor="Red" TextColor="White" Clicked="updatebtn"/>
+                    <Button Text="Cancel" Grid.Row="6" Grid.ColumnSpan="2" BackgroundColor="Red" TextColor="White" Clicked="cancelbtn"/>
+                </Grid>
+            </AbsoluteLayout>
+        </ScrollView>
+       
+    </ContentPage.Content>
+</ContentPage>

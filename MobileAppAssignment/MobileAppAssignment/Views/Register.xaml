@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MobileAppAssignment.Register">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Text="Reset" Grid.Column="1" BackgroundColor="Red" TextColor="White" Clicked="Clearbtn"/>
+                    <Button Text="Cancel" Grid.Column="2" BackgroundColor="Red" TextColor="White" Clicked="Cancelbtn"/>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Entry Placeholder="Name" Grid.ColumnSpan="2" x:Name="name"/>
+                    <Entry Placeholder="Email" Grid.Row="1" Grid.ColumnSpan="2" x:Name="email"/>
+                    <Entry Placeholder="Password" Grid.Row="2" IsPassword="{Binding isPassword}" x:Name="Password"/>
+                    <Button Text="show" x:Name="Showbtn" Clicked="Showbtn_Clicked"  Grid.Row="2" Grid.Column="1" BackgroundColor="White" TextColor="Red"/>
+                    <Entry Placeholder="Confirm Password" Grid.Row="3" x:Name="comfirmpassword" Grid.ColumnSpan="2" IsPassword="True"/>
+                    <Grid Grid.Row="4" Grid.ColumnSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Gender :" FontSize="18" HorizontalOptions="Center"/>
+                        <Picker Title="Gender" Grid.Column="1" x:Name="Gender" HorizontalOptions="FillAndExpand" >
+                            <Picker.Items>
+                                <x:String>Male</x:String>
+                                <x:String>Female</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Grid>
+                    <Entry Placeholder="Mobile No." Keyboard="Numeric" x:Name="phone" Grid.Row="5" Grid.ColumnSpan="2"/>
+                    <Grid Grid.Row="6" Grid.ColumnSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Programme :" FontSize="17" HorizontalOptions="Center"/>
+                        <Picker Title="Programme" Grid.Column="1"  x:Name="programme" HorizontalOptions="FillAndExpand" >
+                            <Picker.Items>
+                                <x:String>Diploma in Software Engineering</x:String>
+                                <x:String>Diploma in Information Technology</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Grid>
+                    <Grid Grid.Row="7" Grid.ColumnSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Date Enrolled :" FontSize="18" VerticalOptions="Center"/>
+                        <DatePicker Grid.Column="1" x:Name="datePicker"/>
+                    </Grid>
+                </Grid>
+                <AbsoluteLayout>
+                    <Button Text="Register" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="Red" TextColor="White" Clicked="Button_Clicked"/>
+                </AbsoluteLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+    
+    
+ 
